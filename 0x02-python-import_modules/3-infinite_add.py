@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-from sys import argv
+import sys
 
+if __name__ != "__main__":
+    exit()
 
-def main():
-    sum = 0
-    for i in argv[1:]:
-        sum += int(i)
-    print("{:d}".format(sum))
-
-if __name__ == "__main__":
-    main()
+i = 0
+result = 0
+for argument in sys.argv:
+    if i != 0:
+        result += int(argument)
+    else:
+        i += 1
+print("{:d}".format(result))
